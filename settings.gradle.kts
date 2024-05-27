@@ -8,6 +8,15 @@
 plugins {
     // Apply the foojay-resolver plugin to allow automatic download of JDKs
     id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
+    id("com.gradle.develocity") version "3.17.4"
+}
+
+develocity {
+    server = "https://scans.gradle.com" // adjust to your Develocity server
+    buildScan {
+        termsOfUseUrl.set("https://gradle.com/help/legal-terms-of-use")
+        termsOfUseAgree.set("yes")
+    }
 }
 
 rootProject.name = "multibranch-example"
