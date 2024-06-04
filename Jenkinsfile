@@ -12,6 +12,7 @@ pipeline {
                     sh './gradlew clean build'
                 }
             }
+            options { timestamps() }
         }
     }
 }
