@@ -2,9 +2,6 @@ pipeline {
     agent {
         label 'docker'
     }
-    options {
-        sendSplunkConsoleLog()
-    }
     stages {
         stage('build_project') {
             steps {
